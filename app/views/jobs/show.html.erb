@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.description %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @job.salary %>
+</p>
+
+<p>
+  <strong>Skillsets:</strong>
+  <%= @job.skillsets %>
+</p>
+
+<% if can? :manage, @job %>
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+<% end %>
+<%= link_to 'Back', jobs_path %>
